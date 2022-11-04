@@ -27,8 +27,8 @@ class Addtion extends FormRequest
     public function rules()
     {
         return [
-            'num1' => 'required|integer',
-            'num2' => 'required|integer',
+            'x' => 'required|integer',
+            'y' => 'required|integer',
         ];
     }
 
@@ -45,8 +45,10 @@ class Addtion extends FormRequest
     public function messages()
     {
         return [
-            'num1.required' => 'This must be a number',
-            'num2.required' => 'This must be a number',
+            'x.required' => 'This field cannot be empty',
+            'y.required' => 'This field cannot be empty',
+            'x.integer' => 'This must be a number',
+            'y.integer' => 'This must be a number',
         ];
 
     }

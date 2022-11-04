@@ -11,8 +11,8 @@ class AddiontionApiController extends Controller
     public function store(Addtion $request)
     {
 
-        $x = $request->num1;
-        $y = $request->num2;
+        $x = $request->x;
+        $y = $request->y;
 
         $sum = $x + $y;
         if ($sum) {
