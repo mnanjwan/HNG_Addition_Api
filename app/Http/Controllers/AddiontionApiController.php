@@ -18,47 +18,26 @@ class AddiontionApiController extends Controller
         switch ($operation_type) {
             case 'addition':
                 $sum = $x + $y;
-                return response()->json([
-                    "slackUsername" => "mnanjwan",
-                    "result" => $sum,
-                    "operation_type" => $operation_type,
-                ]);
+
                 break;
 
             case 'subtraction':
                 $sum = $x - $y;
-                return response()->json([
-                    "slackUsername" => "mnanjwan",
-                    "result" => $sum,
-                    "operation_type" => $operation_type,
-                ]);
+
                 break;
 
                 case 'multiplication':
                     $sum = $x * $y;
-                    return response()->json([
-                        "slackUsername" => "mnanjwan",
-                        "result" => $sum,
-                        "operation_type" => $operation_type,
-                    ]);
+
                     break;
 
-                case '':
-                    $x = 0;
-                    $y = 0;
-                    $sum = $x + $y;
-                    return response()->json([
-                        "slackUsername" => "mnanjwan",
-                        "result" => $sum,
-                        "operation_type" => "Addition",
-                    ]);
-                    break;
+
         }
+        return response()->json([
+            "slackUsername" => "mnanjwan",
+            "result" => $sum,
+            "operation_type" => $operation_type,
+        ]);
 
-        // if ($sum) {
-
-        // } else {
-        //     return "success";
-        // }
     }
 }
