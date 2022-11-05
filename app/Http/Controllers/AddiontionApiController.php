@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AddiontionApiController extends Controller
 {
 
-    public function store(Addtion $request)
+    public function store(Request $request)
     {
 
         $x = $request->x;
@@ -43,8 +43,16 @@ class AddiontionApiController extends Controller
                     ]);
                     break;
 
-                case 'default':
-                    return "success";
+                case '':
+                    $x = 0;
+                    $y = 0;
+                    $sum = $x + $y;
+                    return response()->json([
+                        "slackUsername" => "mnanjwan",
+                        "result" => $sum,
+                        "operation_type" => "Addition",
+                    ]);
+                    break;
         }
 
         // if ($sum) {
