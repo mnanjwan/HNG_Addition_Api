@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AddiontionApiController extends Controller
 {
 
-    public function store(Request $request)
+    public function store(Addtion $request)
     {
 
         $x = $request->x;
@@ -22,11 +22,7 @@ class AddiontionApiController extends Controller
                 "operation_type" => "Addition",
             ]);
         }else{
-            return response()->json([
-                "slackUsername" => "mnanjwan",
-                "result" => 0,
-                "operation_type" => "Addition",
-            ]);
+                return "success";
         }
 
     }
